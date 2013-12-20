@@ -15,7 +15,14 @@ function indent() {
   esac
 }
 
-cd $BUILD_DIR
+cd ${HOME}
+
+curl wget http://wwwmaster.postgresql.org/redir/198/f/source/v8.3.7/postgresql-8.3.7.tar.gz > postgresql-8.3.7.tar.gz
+tar xzvf postgresql-8.3.7.tar.gz
+cd postgresql-8.3.7
+echo `pwd`
+
+#cd $BUILD_DIR
 
 # configure
 if [ -f configure ]; then
@@ -26,3 +33,10 @@ fi
 # make
 echo "-----> Compiling with Make"
 make 2>&1 | indent
+
+# make install
+echo "-----> Installing with Make"
+make install 2>&1 | indent
+
+
+cd $BUILD_DIR
