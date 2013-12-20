@@ -17,7 +17,7 @@ function indent() {
 
 cd ${HOME}
 
-curl wget http://wwwmaster.postgresql.org/redir/198/f/source/v8.3.7/postgresql-8.3.7.tar.gz > postgresql-8.3.7.tar.gz
+curl wget http://ftp.postgresql.org/pub/source/v8.3.7/postgresql-8.3.7.tar.gz > postgresql-8.3.7.tar.gz
 tar xzvf postgresql-8.3.7.tar.gz
 cd postgresql-8.3.7
 echo `pwd`
