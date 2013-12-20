@@ -17,8 +17,8 @@ function indent() {
 
 cd ${HOME}
 
-curl wget http://ftp.postgresql.org/pub/source/v8.3.7/postgresql-8.3.7.tar.gz > postgresql-8.3.7.tar.gz
-tar xzvf postgresql-8.3.7.tar.gz
+curl wget http://ftp.postgresql.org/pub/source/v9.3.2/postgresql-9.3.2.tar.gz > postgresql-9.3.2.tar.gz
+tar xzvf postgresql-9.3.2.tar.gz
 cd postgresql-8.3.7
 echo `pwd`
 
@@ -27,7 +27,7 @@ echo `pwd`
 # configure
 if [ -f configure ]; then
   echo "-----> Configuring"
-  ./configure 2>&1 | indent
+  ./configure --prefix=${HOME}/postgresql-9.3.2 2>&1 | indent
 fi
 
 # make
