@@ -38,5 +38,4 @@ make 2>&1 | indent
 echo "-----> Installing with Make"
 make install 2>&1 | indent
 
-
 cd $BUILD_DIR
